@@ -132,7 +132,7 @@
             }
             return;
         }
-        var interval = parseInt(root.getAttribute("data-interval") || "7000", 10);
+        var interval = parseInt(root.getAttribute("data-interval") || "6000", 10);
         var index = 0;
         revealHeroSlide(hero, visible[0]);
         if (visible.length === 1 || reduceMotion) {
