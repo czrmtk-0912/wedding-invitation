@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Noto+Serif+JP:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/dear.css"/>
+</head>
+<body class="page page--dear">
+<div id="dear-loader" class="dear-loader" aria-hidden="true">
+    <p class="dear-loader__text" id="dearLoaderText" aria-label="Wedding Invitation"></p>
+</div>
+
+<header class="dear-nav" id="dearNav">
+    <div class="dear-nav__inner">
+        <a class="dear-nav__brand" href="#top">Wedding</a>
+        <button type="button" class="dear-nav__toggle" id="dearNavToggle" aria-expanded="false" aria-controls="dearNavMenu">
+            <span class="sr-only">メニュー</span>
+            <span class="dear-nav__toggle-bar"></span>
+            <span class="dear-nav__toggle-bar"></span>
+            <span class="dear-nav__toggle-bar"></span>
+        </button>
+        <nav class="dear-nav__menu" id="dearNavMenu" aria-label="セクション一覧">
+            <a class="dear-nav__link" href="#top">TOP</a>
+            <a class="dear-nav__link" href="#message">MESSAGE</a>
+            <a class="dear-nav__link" href="#profile">PROFILE</a>
+            <a class="dear-nav__link" href="#story">STORY</a>
+            <a class="dear-nav__link" href="#countdown">COUNTDOWN</a>
+            <a class="dear-nav__link" href="#events">EVENTS</a>
+            <a class="dear-nav__link dear-nav__link--accent" href="#rsvp">RSVP</a>
+        </nav>
+    </div>
+</header>
+
+<main class="dear-main" id="dearMain">
+    <section class="dear-hero" id="top">
+        <div class="dear-hero__slides" id="dearHeroSlides" data-interval="7000">
+            <div class="dear-hero__slide dear-hero__slide--fallback" aria-hidden="true"></div>
+        </div>
+        <div class="dear-hero__overlay" aria-hidden="true"></div>
+        <div class="dear-hero__content">
+            <p class="dear-hero__eyebrow">Wedding Invitation</p>
+            <h1 class="dear-hero__names">
+                <span data-bind="groomName">Groom</span>
+                <span class="dear-hero__amp">&amp;</span>
+                <span data-bind="brideName">Bride</span>
+            </h1>
+            <p class="dear-hero__date" data-bind="ceremonyDate">2026 / 09 / 12 ( Sat)</p>
+        </div>
+        <a class="dear-hero__scroll" href="#message" aria-label="メッセージへスクロール">
+            <span class="dear-hero__scroll-text">Scroll</span>
+            <span class="dear-hero__scroll-line" aria-hidden="true"></span>
+        </a>
+    </section>
+
+    <section class="dear-section dear-message reveal" id="message">
+        <div class="dear-section__inner container">
+            <header class="dear-section__head">
+                <p class="dear-section__en">Message</p>
+                <h2 class="dear-section__ja" data-bind="greetingTitle">ご挨拶</h2>
+            </header>
+            <div class="dear-card dear-card--message" id="greetingParagraphs"></div>
+        </div>
+    </section>
+
+    <section class="dear-section dear-profile reveal" id="profile">
+        <div class="dear-section__inner container">
+            <header class="dear-section__head">
+                <p class="dear-section__en">Profile</p>
+                <h2 class="dear-section__ja" data-bind="profileHeading">新郎新婦紹介</h2>
+            </header>
+            <div class="dear-profile__grid" id="profileGrid"></div>
+        </div>
+    </section>
+
+    <section class="dear-section dear-story" id="story">
+        <div class="dear-section__inner container">
+            <header class="dear-section__head reveal">
+                <p class="dear-section__en">Photo Story</p>
+                <h2 class="dear-section__ja" data-bind="storyHeading">ふたりの写真</h2>
+            </header>
+            <div class="dear-story__list" id="storyList"></div>
+        </div>
+    </section>
+
+    <section class="dear-section dear-countdown reveal" id="countdown" data-countdown-target="2026-09-12T14:00:00+09:00">
+        <div class="dear-section__inner container">
+            <header class="dear-section__head">
+                <p class="dear-section__en">Countdown</p>
+                <h2 class="dear-section__ja" data-bind="countdownHeading">挙式まで</h2>
+            </header>
+            <div class="dear-countdown__grid" id="dearCountdown">
+                <div class="dear-countdown__unit"><span class="dear-countdown__num" data-unit="days">--</span><span class="dear-countdown__label">Days</span></div>
+                <div class="dear-countdown__unit"><span class="dear-countdown__num" data-unit="hours">--</span><span class="dear-countdown__label">Hours</span></div>
+                <div class="dear-countdown__unit"><span class="dear-countdown__num" data-unit="minutes">--</span><span class="dear-countdown__label">Minutes</span></div>
+                <div class="dear-countdown__unit"><span class="dear-countdown__num" data-unit="seconds">--</span><span class="dear-countdown__label">Seconds</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dear-section dear-events reveal" id="events">
+        <div class="dear-section__inner container">
+            <header class="dear-section__head">
+                <p class="dear-section__en">Events</p>
+                <h2 class="dear-section__ja" data-bind="eventsHeading">式のご案内</h2>
+            </header>
+            <div class="dear-card dear-card--events">
+                <div class="dear-event">
+                    <h3 class="dear-event__title" data-bind="ceremonyTitle">挙式</h3>
+                    <dl class="dear-event__detail">
+                        <div class="dear-event__row"><dt data-bind="dateLabel">日付</dt><dd data-bind="ceremonyDate">2026 / 09 / 12 ( Sat)</dd></div>
+                        <div class="dear-event__row"><dt data-bind="receptionLabel">受付</dt><dd data-bind="ceremonyReception">13:30</dd></div>
+                        <div class="dear-event__row"><dt data-bind="startLabel">開始</dt><dd data-bind="ceremonyTime">14:00</dd></div>
+                    </dl>
+                </div>
+                <div class="dear-event">
+                    <h3 class="dear-event__title" data-bind="receptionTitle">披露宴</h3>
+                    <dl class="dear-event__detail">
+                        <div class="dear-event__row"><dt data-bind="receptionLabel">受付</dt><dd data-bind="receptionReception">14:45</dd></div>
+                        <div class="dear-event__row"><dt data-bind="startLabel">開始</dt><dd data-bind="receptionTime">15:15</dd></div>
+                    </dl>
+                </div>
+                <div class="dear-event dear-event--venue">
+                    <h3 class="dear-event__title" data-bind="venueTitle">会場</h3>
+                    <p class="dear-event__venue-name" data-bind="venueName">椿山荘東京 はるひ</p>
+                    <p class="dear-event__venue-address" data-bind="venueAddress">東京都文京区関口2-10-8</p>
+                    <p class="dear-event__map"><a class="dear-link" data-bind="mapsLink" href="https://www.google.com/maps/search/Hotel+Chinzanso+Tokyo" target="_blank" rel="noopener noreferrer">Google Map</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dear-section dear-rsvp reveal" id="rsvp">
+        <div class="dear-section__inner container">
+            <header class="dear-section__head">
+                <p class="dear-section__en">RSVP</p>
+                <h2 class="dear-section__ja" data-bind="rsvpTitle">ご出欠のお願い</h2>
+            </header>
+            <div class="dear-card dear-card--rsvp">
+                <p class="dear-rsvp__lead" data-bind="rsvpLead">お手数ではございますが、下記ボタンよりGoogleフォームにて出欠のご回答をお願い申し上げます。</p>
+                <p class="dear-rsvp__deadline">
+                    <span class="dear-rsvp__deadline-label" data-bind="rsvpDeadlineLabel">回答期限</span>
+                    <span class="dear-rsvp__deadline-date" data-bind="rsvpDeadline">2026年8月31日（月）</span>
+                </p>
+                <a class="dear-btn dear-btn--primary" id="rsvpFormLink" href="https://docs.google.com/forms/d/e/1FAIpQLSf8_QOyrLT44Djb2MBHI6s-vE8bi6hlSvAj6drOg33y9aHtEQ/viewform" target="_blank" rel="noopener noreferrer" data-bind="rsvpButton">Googleフォームで回答する</a>
+                <p class="dear-rsvp__note" data-bind="rsvpNote">回答はGoogleフォームで管理されます。</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="dear-footer reveal">
+    <p class="dear-footer__thanks">Thank you</p>
+    <p class="dear-footer__names"><span data-bind="groomName">Groom</span><span class="dear-footer__amp">&amp;</span><span data-bind="brideName">Bride</span></p>
+</footer>
+
+<nav class="dear-bottom-nav" aria-label="クイックナビ">
+    <a href="#top">TOP</a>
+    <a href="#message">MSG</a>
+    <a href="#profile">PRO</a>
+    <a href="#rsvp" class="is-accent">RSVP</a>
+</nav>
+
+<script src="config.js"></script>
+<script src="js/site-init.js"></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
