@@ -14,7 +14,7 @@ window.WEDDING_CONFIG = {
     mapsUrl: "https://www.google.com/maps/search/Hotel+Chinzanso+Tokyo",
     countdownTargetIso: "2026-09-12T14:00:00+09:00",
 
-    heroImages: ["images/hero.jpg", "images/hero.jpg", "images/hero.jpg"],
+    heroImages: ["images/hero-1.jpg", "images/hero-2.jpg", "images/hero-3.jpg"],
     storyImages: ["images/story-1.jpg", "images/story-2.jpg", "images/story-3.jpg"],
 
     greeting: {
