@@ -313,6 +313,37 @@
         window.setInterval(tick, 1000);
     }
 
+    function initEventTabs() {
+        var root = document.getElementById("dearEventTabs");
+        if (!root) {
+            return;
+        }
+        var buttons = root.querySelectorAll("[data-event-tab]");
+        var panels = root.querySelectorAll("[data-event-panel]");
+        if (!buttons.length || !panels.length) {
+            return;
+        }
+        buttons.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                var target = btn.getAttribute("data-event-tab");
+                buttons.forEach(function (b) {
+                    var active = b === btn;
+                    b.classList.toggle("is-active", active);
+                    b.setAttribute("aria-selected", active ? "true" : "false");
+                });
+                panels.forEach(function (panel) {
+                    var show = panel.getAttribute("data-event-panel") === target;
+                    panel.classList.toggle("is-active", show);
+                    if (show) {
+                        panel.removeAttribute("hidden");
+                    } else {
+                        panel.setAttribute("hidden", "hidden");
+                    }
+                });
+            });
+        });
+    }
+
     function bootstrap() {
         initLoader();
         initImages();
@@ -320,6 +351,7 @@
         initNav();
         initSmoothScroll();
         initCountdown();
+        initEventTabs();
         document.body.addEventListener("dear:ready", initHeroSlider, { once: true });
         window.setTimeout(initParallax, LOADER_MS + LOADER_FADE_MS + 100);
     }

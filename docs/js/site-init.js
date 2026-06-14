@@ -21,12 +21,20 @@
         }
     }
 
+    function setTextAll(sel, text) {
+        document.querySelectorAll(sel).forEach(function (el) {
+            if (text != null) {
+                el.textContent = text;
+            }
+        });
+    }
+
     document.title =
         "Wedding Invitation " + cfg.groomName + " & " + cfg.brideName;
 
-    setText("[data-bind=groomName]", cfg.groomName);
-    setText("[data-bind=brideName]", cfg.brideName);
-    setText("[data-bind=ceremonyDate]", cfg.ceremonyDate);
+    setTextAll("[data-bind=groomName]", cfg.groomName);
+    setTextAll("[data-bind=brideName]", cfg.brideName);
+    setTextAll("[data-bind=ceremonyDate]", cfg.ceremonyDate);
     setText("[data-bind=venueName]", cfg.venueName);
     setText("[data-bind=venueAddress]", cfg.venueAddress);
     setText("[data-bind=greetingTitle]", cfg.greeting.title);
@@ -34,16 +42,29 @@
     setText("[data-bind=storyHeading]", cfg.labels.storyHeading);
     setText("[data-bind=countdownHeading]", cfg.labels.countdownHeading);
     setText("[data-bind=eventsHeading]", cfg.labels.eventsHeading);
-    setText("[data-bind=ceremonyTitle]", cfg.labels.ceremonyTitle);
+    setTextAll("[data-bind=ceremonyTitle]", cfg.labels.ceremonyTitle);
     setText("[data-bind=receptionTitle]", cfg.labels.receptionTitle);
     setText("[data-bind=venueTitle]", cfg.labels.venueTitle);
-    setText("[data-bind=dateLabel]", cfg.labels.dateLabel);
-    setText("[data-bind=receptionLabel]", cfg.labels.receptionLabel);
-    setText("[data-bind=startLabel]", cfg.labels.startLabel);
-    setText("[data-bind=ceremonyReception]", cfg.event.ceremonyReception);
-    setText("[data-bind=ceremonyTime]", cfg.event.ceremony);
-    setText("[data-bind=receptionReception]", cfg.event.receptionReception);
-    setText("[data-bind=receptionTime]", cfg.event.reception);
+    setTextAll("[data-bind=gatherTitle]", cfg.labels.gatherTitle);
+    setText("[data-bind=familyTabLabel]", cfg.labels.familyTabLabel);
+    setText("[data-bind=friendTabLabel]", cfg.labels.friendTabLabel);
+    setTextAll("[data-bind=timeLabel]", cfg.labels.timeLabel);
+    setTextAll("[data-bind=placeLabel]", cfg.labels.placeLabel);
+    setText("[data-bind=ceremonyVenueLabel]", cfg.labels.ceremonyVenueLabel);
+    setText("[data-bind=receptionCheckInLabel]", cfg.labels.receptionCheckInLabel);
+    setText("[data-bind=contactLabel]", cfg.labels.contactLabel);
+    setTextAll("[data-bind=dateLabel]", cfg.labels.dateLabel);
+    setTextAll("[data-bind=startLabel]", cfg.labels.startLabel);
+    setText("[data-bind=familyGatherTime]", cfg.event.familyGatherTime);
+    setText("[data-bind=familyGatherPlace]", cfg.event.familyGatherPlace);
+    setText("[data-bind=friendGatherTime]", cfg.event.friendGatherTime);
+    setText("[data-bind=friendGatherPlace]", cfg.event.friendGatherPlace);
+    setText("[data-bind=ceremonyVenueName]", cfg.event.ceremonyVenueName);
+    setText("[data-bind=ceremonyVenueDetail]", cfg.event.ceremonyVenueDetail);
+    setText("[data-bind=ceremonyTime]", cfg.event.ceremonyTime);
+    setText("[data-bind=receptionCheckInTime]", cfg.event.receptionCheckInTime);
+    setText("[data-bind=receptionCheckInPlace]", cfg.event.receptionCheckInPlace);
+    setText("[data-bind=receptionTime]", cfg.event.receptionTime);
     setText("[data-bind=rsvpTitle]", cfg.rsvp.title);
     setText("[data-bind=rsvpLead]", cfg.rsvp.lead);
     setText("[data-bind=rsvpDeadlineLabel]", cfg.rsvp.deadlineLabel);
@@ -53,6 +74,12 @@
 
     setAttr("#countdown", "data-countdown-target", cfg.countdownTargetIso);
     setAttr("[data-bind=mapsLink]", "href", cfg.mapsUrl);
+
+    var contactLink = document.getElementById("contactPhoneLink");
+    if (contactLink && cfg.event.contactPhone) {
+        contactLink.href = "tel:" + cfg.event.contactPhone.replace(/-/g, "");
+        contactLink.textContent = cfg.event.contactPhone;
+    }
 
     var rsvpBtn = document.getElementById("rsvpFormLink");
     if (rsvpBtn && cfg.googleFormUrl) {

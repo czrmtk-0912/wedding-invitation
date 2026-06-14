@@ -45,17 +45,24 @@ window.WEDDING_CONFIG = {
     },
 
     event: {
-        ceremonyReception: "13:30",
-        ceremony: "14:00",
-        receptionReception: "14:45",
-        reception: "15:15"
+        ceremonyTime: "14:00",
+        ceremonyVenueName: "杜乃宮",
+        ceremonyVenueDetail: "（椿山荘東京 境内）",
+        familyGatherTime: "13:15",
+        familyGatherPlace: "バンケット棟 地下1階 寿",
+        friendGatherTime: "13:40",
+        friendGatherPlace: "バンケット棟 1階 瑞光",
+        receptionCheckInTime: "14:45",
+        receptionCheckInPlace: "　バンケット棟 4階 鼓",
+        receptionTime: "15:15",
+        contactPhone: "03-3943-1111"
     },
 
     rsvp: {
         title: "ご出欠のお願い",
         lead: "お手数ではございますが、下記ボタンよりGoogleフォームにて出欠のご回答をお願い申し上げます。",
         deadlineLabel: "回答期限",
-        deadline: "2026年8月31日（月）",
+        deadline: "2026年8月6日（木）",
         buttonText: "Googleフォームで回答する",
         note: "回答はGoogleフォームで管理されます。送信後、内容の変更はフォームから再度ご入力ください。"
     },
@@ -70,9 +77,16 @@ window.WEDDING_CONFIG = {
         eventsHeading: "式のご案内",
         ceremonyTitle: "挙式",
         receptionTitle: "披露宴",
-        venueTitle: "会場",
+        venueTitle: "式場",
+        gatherTitle: "集合",
+        familyTabLabel: "親族",
+        friendTabLabel: "友人",
+        ceremonyVenueLabel: "挙式会場",
+        receptionCheckInLabel: "披露宴 受付",
+        contactLabel: "お問い合わせ",
         dateLabel: "日付",
-        receptionLabel: "受付",
+        timeLabel: "時間",
+        placeLabel: "場所",
         startLabel: "開始",
         bottomNavAriaLabel: "クイックナビ"
     }
