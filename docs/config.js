@@ -55,7 +55,8 @@ window.WEDDING_CONFIG = {
         friendGatherPlace: "バンケット棟 1階 瑞光",
         receptionCheckInTime: "14:45",
         receptionCheckInPlace: "　バンケット棟 4階 鼓",
-        receptionVenue: "はるひ（バンケット棟 7階）",
+        receptionVenueName: "はるひ",
+        receptionVenueDetail: "（バンケット棟 7階）",
         receptionTime: "15:15",
         contactPhone: "03-3943-1111"
     },
@@ -87,7 +88,7 @@ window.WEDDING_CONFIG = {
         friendTabLabel: "ご友人",
         ceremonyVenueLabel: "挙式会場",
         receptionCheckInLabel: "披露宴\n受付",
-        receptionVenueLabel: "披露宴会場",
+        receptionVenueLabel: "披露宴\n会場",
         contactLabel: "お問い合わせ",
         mapsLinkLabel: "Google Map",
         accessLinkLabel: "アクセス（公式）",

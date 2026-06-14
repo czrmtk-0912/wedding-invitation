@@ -55,7 +55,8 @@
     setText("[data-bind=ceremonyVenueLabel]", cfg.labels.ceremonyVenueLabel);
     setText("[data-bind=receptionCheckInLabel]", cfg.labels.receptionCheckInLabel);
     setText("[data-bind=receptionVenueLabel]", cfg.labels.receptionVenueLabel);
-    setText("[data-bind=receptionVenue]", cfg.event.receptionVenue);
+    setText("[data-bind=receptionVenueName]", cfg.event.receptionVenueName);
+    setText("[data-bind=receptionVenueDetail]", cfg.event.receptionVenueDetail);
     setText("[data-bind=mapsLinkLabel]", cfg.labels.mapsLinkLabel);
     setText("[data-bind=accessLinkLabel]", cfg.labels.accessLinkLabel);
     setText("[data-bind=contactLabel]", cfg.labels.contactLabel);
