@@ -46,12 +46,18 @@
     setText("[data-bind=receptionTitle]", cfg.labels.receptionTitle);
     setText("[data-bind=venueTitle]", cfg.labels.venueTitle);
     setTextAll("[data-bind=gatherTitle]", cfg.labels.gatherTitle);
+    setText("[data-bind=gatherNotice]", cfg.labels.gatherNotice);
+    setText("[data-bind=gatherAudienceLabel]", cfg.labels.gatherAudienceLabel);
     setText("[data-bind=familyTabLabel]", cfg.labels.familyTabLabel);
     setText("[data-bind=friendTabLabel]", cfg.labels.friendTabLabel);
     setTextAll("[data-bind=timeLabel]", cfg.labels.timeLabel);
     setTextAll("[data-bind=placeLabel]", cfg.labels.placeLabel);
     setText("[data-bind=ceremonyVenueLabel]", cfg.labels.ceremonyVenueLabel);
     setText("[data-bind=receptionCheckInLabel]", cfg.labels.receptionCheckInLabel);
+    setText("[data-bind=receptionVenueLabel]", cfg.labels.receptionVenueLabel);
+    setText("[data-bind=receptionVenue]", cfg.event.receptionVenue);
+    setText("[data-bind=mapsLinkLabel]", cfg.labels.mapsLinkLabel);
+    setText("[data-bind=accessLinkLabel]", cfg.labels.accessLinkLabel);
     setText("[data-bind=contactLabel]", cfg.labels.contactLabel);
     setTextAll("[data-bind=dateLabel]", cfg.labels.dateLabel);
     setTextAll("[data-bind=startLabel]", cfg.labels.startLabel);
@@ -73,7 +79,15 @@
     setText("[data-bind=rsvpNote]", cfg.rsvp.note);
 
     setAttr("#countdown", "data-countdown-target", cfg.countdownTargetIso);
-    setAttr("[data-bind=mapsLink]", "href", cfg.mapsUrl);
+
+    var mapsLink = document.getElementById("mapsLink");
+    if (mapsLink && cfg.mapsUrl) {
+        mapsLink.href = cfg.mapsUrl;
+    }
+    var accessLink = document.getElementById("accessLink");
+    if (accessLink && cfg.accessUrl) {
+        accessLink.href = cfg.accessUrl;
+    }
 
     var contactLink = document.getElementById("contactPhoneLink");
     if (contactLink && cfg.event.contactPhone) {

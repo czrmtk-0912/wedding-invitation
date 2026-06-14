@@ -108,20 +108,26 @@
                 <p class="dear-section__en">Events</p>
                 <h2 class="dear-section__ja" data-bind="eventsHeading">式のご案内</h2>
             </header>
+
+            <div class="dear-event-audience" id="dearEventTabs">
+                <p class="dear-event-audience__notice" data-bind="gatherNotice">親族とご友人で、集合場所と時間が異なります。</p>
+                <p class="dear-event-audience__label" data-bind="gatherAudienceLabel">集合のご案内</p>
+                <div class="dear-event-audience__nav" role="tablist" aria-label="ご案内の切り替え">
+                    <button type="button" class="dear-event-audience__btn is-active" role="tab" id="eventTabFamily" aria-selected="true" aria-controls="eventPanelFamily" data-event-tab="family" data-bind="familyTabLabel">親族</button>
+                    <button type="button" class="dear-event-audience__btn" role="tab" id="eventTabFriend" aria-selected="false" aria-controls="eventPanelFriend" data-event-tab="friend" data-bind="friendTabLabel">ご友人</button>
+                </div>
+            </div>
+
             <div class="dear-card dear-card--events">
-                <div class="dear-event-tabs" id="dearEventTabs">
-                    <div class="dear-event-tabs__nav" role="tablist" aria-label="ご案内の切り替え">
-                        <button type="button" class="dear-event-tabs__btn is-active" role="tab" id="eventTabFamily" aria-selected="true" aria-controls="eventPanelFamily" data-event-tab="family" data-bind="familyTabLabel">親族</button>
-                        <button type="button" class="dear-event-tabs__btn" role="tab" id="eventTabFriend" aria-selected="false" aria-controls="eventPanelFriend" data-event-tab="friend" data-bind="friendTabLabel">友人</button>
-                    </div>
-                    <div class="dear-event-tabs__panel is-active" role="tabpanel" id="eventPanelFamily" aria-labelledby="eventTabFamily" data-event-panel="family">
+                <div class="dear-event-gather">
+                    <div class="dear-event-gather__panel is-active" role="tabpanel" id="eventPanelFamily" aria-labelledby="eventTabFamily" data-event-panel="family">
                         <h3 class="dear-event__title" data-bind="gatherTitle">集合</h3>
                         <dl class="dear-event__detail">
                             <div class="dear-event__row"><dt data-bind="timeLabel">時間</dt><dd data-bind="familyGatherTime">13:15</dd></div>
                             <div class="dear-event__row"><dt data-bind="placeLabel">場所</dt><dd data-bind="familyGatherPlace">バンケット棟 地下1階 寿</dd></div>
                         </dl>
                     </div>
-                    <div class="dear-event-tabs__panel" role="tabpanel" id="eventPanelFriend" aria-labelledby="eventTabFriend" data-event-panel="friend" hidden>
+                    <div class="dear-event-gather__panel" role="tabpanel" id="eventPanelFriend" aria-labelledby="eventTabFriend" data-event-panel="friend" hidden>
                         <h3 class="dear-event__title" data-bind="gatherTitle">集合</h3>
                         <dl class="dear-event__detail">
                             <div class="dear-event__row"><dt data-bind="timeLabel">時間</dt><dd data-bind="friendGatherTime">13:40</dd></div>
@@ -140,16 +146,20 @@
                 <div class="dear-event">
                     <h3 class="dear-event__title" data-bind="receptionTitle">披露宴</h3>
                     <dl class="dear-event__detail">
-                        <div class="dear-event__row"><dt data-bind="receptionCheckInLabel">披露宴 受付</dt><dd><span data-bind="receptionCheckInTime">14:45</span><span class="dear-event__sub" data-bind="receptionCheckInPlace">　バンケット棟 4階 鼓</span></dd></div>
+                        <div class="dear-event__row"><dt class="dear-event__row-label--multiline" data-bind="receptionCheckInLabel">披露宴 受付</dt><dd><span data-bind="receptionCheckInTime">14:45</span><span class="dear-event__sub" data-bind="receptionCheckInPlace">　バンケット棟 4階 鼓</span></dd></div>
+                        <div class="dear-event__row"><dt data-bind="receptionVenueLabel">披露宴会場</dt><dd data-bind="receptionVenue">はるひ（バンケット棟 7階）</dd></div>
                         <div class="dear-event__row"><dt data-bind="startLabel">開始</dt><dd data-bind="receptionTime">15:15</dd></div>
                     </dl>
                 </div>
                 <div class="dear-event dear-event--venue">
                     <h3 class="dear-event__title" data-bind="venueTitle">式場</h3>
-                    <p class="dear-event__venue-name" data-bind="venueName">椿山荘東京 はるひ</p>
+                    <p class="dear-event__venue-name" data-bind="venueName">ホテル椿山荘東京</p>
                     <p class="dear-event__venue-address" data-bind="venueAddress">東京都文京区関口2-10-8</p>
                     <p class="dear-event__contact"><span data-bind="contactLabel">お問い合わせ</span>：<a class="dear-link" id="contactPhoneLink" href="tel:0339431111">03-3943-1111</a></p>
-                    <p class="dear-event__map"><a class="dear-link" data-bind="mapsLink" href="https://www.google.com/maps/search/Hotel+Chinzanso+Tokyo" target="_blank" rel="noopener noreferrer">Google Map</a></p>
+                    <p class="dear-event__links">
+                        <a class="dear-link" id="mapsLink" href="#" target="_blank" rel="noopener noreferrer" data-bind="mapsLinkLabel">Google Map</a>
+                        <a class="dear-link" id="accessLink" href="#" target="_blank" rel="noopener noreferrer" data-bind="accessLinkLabel">アクセス（公式）</a>
+                    </p>
                 </div>
             </div>
         </div>

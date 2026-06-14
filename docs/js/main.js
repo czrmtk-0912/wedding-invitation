@@ -318,8 +318,11 @@
         if (!root) {
             return;
         }
+        var eventsSection = document.getElementById("events");
         var buttons = root.querySelectorAll("[data-event-tab]");
-        var panels = root.querySelectorAll("[data-event-panel]");
+        var panels = eventsSection
+            ? eventsSection.querySelectorAll("[data-event-panel]")
+            : root.querySelectorAll("[data-event-panel]");
         if (!buttons.length || !panels.length) {
             return;
         }

@@ -9,9 +9,10 @@ window.WEDDING_CONFIG = {
     groomName: "田中基幹",
     brideName: "野口千鶴",
     ceremonyDate: "2026 / 09 / 12 ( Sat)",
-    venueName: "椿山荘東京 はるひ",
+    venueName: "ホテル椿山荘東京",
     venueAddress: "東京都文京区関口2-10-8",
-    mapsUrl: "https://www.google.com/maps/search/Hotel+Chinzanso+Tokyo",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=ホテル椿山荘東京+東京都文京区関口2-10-8",
+    accessUrl: "https://hotel-chinzanso-tokyo.jp/access/",
     countdownTargetIso: "2026-09-12T14:00:00+09:00",
 
     heroImages: ["images/hero-1.jpg", "images/hero-2.jpg", "images/hero-3.jpg"],
@@ -20,10 +21,10 @@ window.WEDDING_CONFIG = {
     greeting: {
         title: "ご挨拶",
         paragraphs: [
-            "謹啓　時下ますますご清栄のこととお慶び申し上げます。",
-            "このたび私たちは結婚式を執り行うこととなりました。",
-            "つきましては日頃お世話になっている皆様に感謝を込めて披露宴を催したく存じます。",
-            "ご多用中とは存じますが、ぜひご出席くださいますようご案内申し上げます。"
+            "謹啓　時下ますますご清栄のこととお慶び申し上げます",
+            "このたび私たちは結婚式を執り行うこととなりました",
+            "つきましては日頃お世話になっている皆様に感謝を込めて披露宴を催したく存じます",
+            "ご多用中とは存じますが　ぜひご出席くださいますようご案内申し上げます"
         ]
     },
 
@@ -32,14 +33,14 @@ window.WEDDING_CONFIG = {
             name: "田中 基幹",
             nameEn: "MOTOKI TANAKA",
             role: "新郎",
-            description: "穏やかな性格で、休日は旅行や写真を楽しんでいます。",
+            description: "スポーツ観戦が趣味で　特にサッカー観戦が好きです",
             image: "images/groom.jpg"
         },
         bride: {
             name: "野口 千鶴",
             nameEn: "CHIZURU NOGUCHI",
             role: "新婦",
-            description: "明るく笑顔が素敵で、食べ歩きやカフェ巡りが好きです。",
+            description: "旅行とバスケ観戦が好きです",
             image: "images/bride.jpg"
         }
     },
@@ -47,24 +48,25 @@ window.WEDDING_CONFIG = {
     event: {
         ceremonyTime: "14:00",
         ceremonyVenueName: "杜乃宮",
-        ceremonyVenueDetail: "（椿山荘東京 境内）",
+        ceremonyVenueDetail: "（ホテル椿山荘東京 境内）",
         familyGatherTime: "13:15",
         familyGatherPlace: "バンケット棟 地下1階 寿",
         friendGatherTime: "13:40",
         friendGatherPlace: "バンケット棟 1階 瑞光",
         receptionCheckInTime: "14:45",
         receptionCheckInPlace: "　バンケット棟 4階 鼓",
+        receptionVenue: "はるひ（バンケット棟 7階）",
         receptionTime: "15:15",
         contactPhone: "03-3943-1111"
     },
 
     rsvp: {
         title: "ご出欠のお願い",
-        lead: "お手数ではございますが、下記ボタンよりGoogleフォームにて出欠のご回答をお願い申し上げます。",
+        lead: "お手数ではございますが　下記ボタンよりGoogleフォームにて出欠のご回答をお願い申し上げます",
         deadlineLabel: "回答期限",
         deadline: "2026年8月6日（木）",
         buttonText: "Googleフォームで回答する",
-        note: "回答はGoogleフォームで管理されます。送信後、内容の変更はフォームから再度ご入力ください。"
+        note: "回答はGoogleフォームで管理されます\n送信後 内容の変更はフォームから再度ご入力ください"
     },
 
     labels: {
@@ -79,11 +81,16 @@ window.WEDDING_CONFIG = {
         receptionTitle: "披露宴",
         venueTitle: "式場",
         gatherTitle: "集合",
+        gatherNotice: "親族とご友人で、集合場所と時間が異なります。",
+        gatherAudienceLabel: "集合のご案内",
         familyTabLabel: "親族",
-        friendTabLabel: "友人",
+        friendTabLabel: "ご友人",
         ceremonyVenueLabel: "挙式会場",
-        receptionCheckInLabel: "披露宴 受付",
+        receptionCheckInLabel: "披露宴\n受付",
+        receptionVenueLabel: "披露宴会場",
         contactLabel: "お問い合わせ",
+        mapsLinkLabel: "Google Map",
+        accessLinkLabel: "アクセス（公式）",
         dateLabel: "日付",
         timeLabel: "時間",
         placeLabel: "場所",
