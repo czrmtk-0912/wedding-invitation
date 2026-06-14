@@ -81,7 +81,7 @@ window.WEDDING_CONFIG = {
         receptionTitle: "披露宴",
         venueTitle: "式場",
         gatherTitle: "集合",
-        gatherNotice: "親族とご友人で、集合場所と時間が異なります。",
+        gatherNotice: "親族とご友人で　集合場所と時間が異なります",
         gatherAudienceLabel: "集合のご案内",
         familyTabLabel: "親族",
         friendTabLabel: "ご友人",
